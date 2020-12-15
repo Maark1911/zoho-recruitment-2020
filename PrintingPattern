@@ -1,0 +1,26 @@
+public class PrintingPattern {
+
+public static void main(String[] args) {
+int input=5;
+String mainStr ="";
+int zero=0;
+System.out.print("  "+zero+"\n");
+String temp ="",sub="";
+String[] strArr=new String[input];
+strArr[0]="1 0 1";int j=1;
+for(int i=1;i<=input;i++){
+temp =  i+" " + zero+" "+i;
+if(i!=1){
+mainStr = temp.replace("0",sub);
+strArr[j]=mainStr;
+temp=mainStr;
+j++;
+}
+sub=temp;
+}
+for(int i=0;i< strArr.length;i++){
+System.out.println(strArr[i]);
+}
+}
+
+}
